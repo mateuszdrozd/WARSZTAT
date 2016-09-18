@@ -1,0 +1,295 @@
+
+@import "_mixins.scss";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.top {
+    @include image(767px,500px);
+    width: 100%;
+    background-image: url(../top.jpg);
+    background-attachment: fixed;
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 10000;
+        cursor: pointer;
+    
+           a {
+             font-size: 34px;
+             text-decoration: none;
+             padding: 15px;
+             flex: 1;
+             color:#FCE300;
+             text-shadow: 2px 2px #000;
+             margin-left: 25px;
+            }
+    }
+    
+    .menu-btn {
+        background-color:transparent;
+        border-color:transparent;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        color: #FCE300;   
+        outline: 0px;
+        position: fixed;
+        z-index: 10000;
+        cursor: pointer;
+        padding-top: 3%;
+    }
+
+   .hidden-btn {
+        display: none;
+    }
+
+   .hidden-nav {
+        display: none;
+    }
+
+   .hidden {
+        display: none;
+    }
+
+   .menu-drop {
+       flex-direction: column;
+       width: 80px;
+   }
+
+   i {
+      color: #FCE300;
+   }
+    
+  .btn-container {
+        width: 50px;
+        height:50px;
+        margin-left:40px;
+  }
+    
+  .invisible {
+        opacity: 0;
+        transition: opacity 0.5s linear;
+  }
+
+  .fa-bars {
+        position: absolute;
+        top: 24px;
+        left: 7px;
+  }
+ 
+}
+
+#new {
+        @include image(767px,500px);
+        width: 100%;
+        background-image: url(../new.jpg);
+        background-attachment: fixed;
+}
+
+
+#york {
+        @include image(767px,500px);
+        width: 100%;
+        background-image: url(../york.jpg);
+        background-attachment: fixed;
+}
+
+#city {
+        @include image(767px,500px);
+        width: 100%;
+        background-image: url(../city.jpg);
+        background-attachment: fixed;
+}
+
+.hide-one {
+    transform:translateX(-300%);
+}
+
+.hide-two {
+    transform:translateX(+300%);
+}
+
+.right {
+    animation-name: right;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-fill-mode:forwards;  
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+} 
+
+@keyframes right {
+    0% { transform:translateX(-300%); }
+    100% { transform:translateX(0); }
+}
+
+.left {
+    animation-name: left;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-fill-mode:forwards;  
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    
+} 
+
+@keyframes left {
+    0% { transform:translateX(+300%); }
+    100% { transform:translateX(0); }
+}
+
+.opacity {
+    @include image(767px,500px);
+    background-color: rgba(255,255,255,0.3);
+    
+}
+
+.container {  
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 5%;
+    margin: 0 auto;
+    font-family: Miriam Libre;
+    padding-top: 7%;
+
+    p {
+      font-size: 13px;
+      font-weight: 900;
+    
+      @include lg-mobile {
+      font-size: 15px;
+      }
+  
+      @include tablet {
+      font-size: 20px;
+      }
+
+      @include desktop {
+      font-size: 28px;
+      }
+    }
+    
+    h1 {
+       font-size: 24px;
+       margin-bottom: 4%;
+       text-align: center;
+            
+       @include lg-mobile {
+       font-size: 30px;
+       }
+  
+       @include tablet {
+       font-size: 40px;
+       }
+
+       @include desktop {
+       font-size: 44px;
+       }
+     }
+}
+
+footer {
+     padding-top: 1%;
+     padding-bottom: 1%;
+     text-align: center;
+     border-top: 1px solid black;
+     opacity: 0.7;
+     font-size: 18px;
+     
+     @include lg-mobile {
+     font-size: 20px;
+     }
+  
+     @include tablet {
+     font-size: 22px;
+     }
+
+    @include desktop {
+    font-size: 30px;
+    }
+}
+    
+#new {
+   -webkit-filter:grayscale(100%); 
+   filter:grayscale(100%);
+   -webkit-transition:all 2s ease; 
+   -moz-transition:all 2s ease; 
+   -o-transition: all 2s ease;
+   -ms-transition: all 2s ease;
+   transition: all 2s ease; 
+}
+
+#new:hover {
+    -webkit-filter:grayscale(0%); 
+    filter:grayscale(0%);
+}
+    
+#york {
+   -webkit-filter: grayscale(100%); 
+   filter: grayscale(100%);
+   -webkit-transition:all 2s ease; 
+   -moz-transition:all 2s ease; 
+   -o-transition: all 2s ease;
+   -ms-transition: all 2s ease;
+   transition: all 2s ease; 
+}
+
+#york:hover { 
+   -webkit-filter:grayscale(0%); 
+   filter:grayscale(0%);
+}
+
+#city {
+   -webkit-filter: grayscale(100%); 
+   filter: grayscale(100%);
+   -webkit-transition:all 2s ease; 
+   -moz-transition:all 2s ease; 
+   -o-transition: all 2s ease;
+   -ms-transition: all 2s ease;
+   transition: all 2s ease;
+}
+
+#city:hover { 
+  -webkit-filter:grayscale(0%); 
+  filter:grayscale(0%);
+}
+
+.flex {
+    display: flex;
+    align-content: space-around;
+    justify-content: flex-start;
+}
+
+.box-flex {
+    display: flex;
+}
+  
+.title-width {
+    width: 30%;
+}
+
+.content-width {
+    width: 70%;
+}
+
