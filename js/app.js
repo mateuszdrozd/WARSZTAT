@@ -1,7 +1,3 @@
-//Elements = {
-//    sectionNew : $("#new");
-//}
-
 
 // hamburger menu 
 
@@ -54,12 +50,12 @@ function btn_Menu_Init () {
     });
 }
 
-function dropdown () {
+function dropDown () {
     var $nav=$('.nav');
     $nav.addClass('menu-drop');
 }
 
-function nodropdown () {
+function noDropDown () {
     var $nav=$('.nav');
     $nav.removeClass('menu-drop');
 }
@@ -98,14 +94,14 @@ function test_match_media_with_listener() {
             
             hideNav();
             showBtn();
-            dropdown();
+            dropDown();
             oneCol();
         }
         
         else {
             showNav();
             hideBtn();
-            nodropdown();
+            noDropDown();
             twoCols();
             menuReset();
         }
@@ -131,8 +127,7 @@ function scroll() {
         // media query change
         function WidthChange(mediaQuery) {
           if (mediaQuery.matches) {
-            var $nav=$('.nav');
-            $nav.addClass("hidden");
+            hideNav()
             menuReset();
           }
         }
@@ -155,20 +150,17 @@ function animate () {
           $("#new").find(".title").addClass("right");
           $("#new").find(".content").addClass("left");  
        }  
+        
       if ( (position*1.5)>yorkX.top) {
-         $("#new").find(".title").addClass("right");
          $("#york").find(".title").addClass("right");
-         $("#new").find(".content").addClass("left"); 
          $("#york").find(".content").addClass("left");
       } 
+        
      if ( (position*1.5)>cityX.top) {
-        $("#new").find(".title").addClass("right");
-        $("#york").find(".title").addClass("right");
         $("#city").find(".title").addClass("right");
-        $("#new").find(".content").addClass("left"); 
-        $("#york").find(".content").addClass("left");
         $("#city").find(".content").addClass("left");        
      }
+        
   })
 
 }
