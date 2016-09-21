@@ -53,11 +53,13 @@ function btn_Menu_Init () {
 function dropDown () {
     var $nav=$('.nav');
     $nav.addClass('menu-drop');
+    $nav.addClass("fadeIn");
 }
 
 function noDropDown () {
     var $nav=$('.nav');
     $nav.removeClass('menu-drop');
+    $nav.removeClass("fadeIn");
 }
 
 
@@ -166,10 +168,33 @@ function animate () {
 
 }
 
+
+//changing background
+var index = 0;
+var background = [
+  "images/top.jpg",
+  "images/top2.jpg",
+  "images/top3.jpeg"
+];
+
+function bgchange (){
+  var top= $(".top");
+  index++;
+  
+  if (index===background.length) {
+      index=0
+  }
+    
+  top.css("background-image","url('"+ background[index] +"')");
+}
+
+setInterval(bgchange, 7000);
+
 $(document).ready(function() {
     btn_Menu_Init ();
     test_match_media_with_listener();
     menuView();
     scroll();
     animate();
+    bgchange ();
 });

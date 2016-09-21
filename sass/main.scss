@@ -15,7 +15,6 @@ body {
 .top {
     @include image(767px,500px);
     width: 100%;
-    background-image: url(../images/top.jpg);
     background-attachment: fixed;
     
     .btn-container {
@@ -78,7 +77,26 @@ body {
        background-color:rgba(0, 0, 0, 0.7);
        margin-top: 90px;
    }
+    
+    .fadeIn {
+    animation-name: fadeIn;
+    -webkit-animation-duration:0.5s;
+    -moz-animation-duration:0.5s;
+    animation-duration:0.5s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-fill-mode:forwards;  
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+} 
 
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+    
   .invisible {
         opacity: 0;
         transition: opacity 0.5s linear;
