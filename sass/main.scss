@@ -19,9 +19,18 @@ body {
     background-attachment: fixed;
     
     .btn-container {
-        width: 50px;
-        height:50px;
-        margin-left:40px;
+        width: 100%;
+        height:90px;
+        position: fixed;
+        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.7);
+        
+        span {
+            font-size: 30px;
+            position:absolute;
+            top:28px;
+            left: 50px;
+        }
     
         .menu-btn {
             background-color:transparent;
@@ -31,8 +40,6 @@ body {
             font-size: 40px;
             color: #FCE300;   
             outline: 0px;
-            position: fixed;
-            z-index: 10000;
             cursor: pointer;
             padding-top: 3%;
          }
@@ -43,21 +50,20 @@ body {
      
      }
     
-    nav {
+    .nav {
         display: flex;
         justify-content: space-between;
         position: fixed;
         z-index: 10000;
         cursor: pointer;
-    
+                                  
            a {
              font-size: 34px;
              text-decoration: none;
-             padding: 15px;
              flex: 1;
              color:#FCE300;
              text-shadow: 2px 2px #000;
-             margin-left: 25px;
+             padding: 20px;
             }
     }
     
@@ -68,7 +74,9 @@ body {
 
    .menu-drop {
        flex-direction: column;
-       width: 80px;
+       width: 100%; 
+       background-color:rgba(0, 0, 0, 0.7);
+       margin-top: 90px;
    }
 
   .invisible {
@@ -220,7 +228,8 @@ body {
         padding: 0 5%;
         margin: 0 auto;
         font-family: Miriam Libre;
-        padding-top: 7%;
+        padding-top: 12%;
+        padding-bottom: 12%;
 
             p {
                 font-size: 13px;
@@ -299,4 +308,3 @@ footer {
 .content-width {
     width: 70%;
 }
-

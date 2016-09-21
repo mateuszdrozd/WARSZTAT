@@ -60,6 +60,7 @@ function noDropDown () {
     $nav.removeClass('menu-drop');
 }
 
+
 //page layout
 
 function twoCols () {
@@ -96,7 +97,7 @@ function test_match_media_with_listener() {
             showBtn();
             dropDown();
             oneCol();
-        }
+         }
         
         else {
             showNav();
