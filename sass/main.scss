@@ -8,8 +8,12 @@
 
 body {
     margin: 0 auto;
-    overflow-x: hidden;
+    //overflow-x: hidden;
     width: 100%;
+}
+
+.wrapper {
+    overflow-x: hidden;
 }
 
 .top {
@@ -113,7 +117,7 @@ body {
 #new {
         @include image(767px,500px);
         width: 100%;
-        background-image: url(../images/new.jpg);
+        background-image: url(../images/newc.jpg);
         background-attachment: fixed;
         -webkit-filter:grayscale(100%); 
         -moz-filter:grayscale(100%);
@@ -139,7 +143,7 @@ body {
 #york {
         @include image(767px,500px);
         width: 100%;
-        background-image: url(../images/york.jpg);
+        background-image: url(../images/yorkc.jpg);
         background-attachment: fixed;
         -webkit-filter:grayscale(100%); 
         -moz-filter:grayscale(100%);
@@ -165,7 +169,7 @@ body {
 #city {
         @include image(767px,500px);
         width: 100%;
-        background-image: url(../images/city.jpg);
+        background-image: url(../images/cityc.jpg);
         background-attachment: fixed;
         -webkit-filter:grayscale(100%); 
         -moz-filter:grayscale(100%);
