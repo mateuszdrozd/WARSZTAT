@@ -143,27 +143,30 @@ function animate () {
        var newX = $("#new").offset();
        var yorkX= $("#york").offset();
        var cityX= $("#city").offset();
-//       console.log("Top: " + newX.top);
-//       console.log("Top: " + yorkX.top);
-//       console.log("Top: " + cityX.top);
+       console.log("Top: " + newX.top);
+       console.log("Top: " + yorkX.top);
+       console.log("Top: " + cityX.top);
            
        var position = $(window).scrollTop();
-//       console.log(position);
-       if ( (position*1.5)>newX.top) {
+       console.log(position);
+       if ( (position*1.4)>newX.top) {
           $("#new").find(".title").addClass("right");
           $("#new").find(".content").addClass("left");  
        }  
         
-      if ( (position*1.5)>yorkX.top) {
+      if ( (position*1.4)>yorkX.top) {
          $("#york").find(".title").addClass("right");
          $("#york").find(".content").addClass("left");
       } 
-        
-     if ( (position*1.5)>cityX.top) {
+               
+     if ( (position*1.4)>cityX.top) {
         $("#city").find(".title").addClass("right");
         $("#city").find(".content").addClass("left");        
      }
-        
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+       $("#city").find(".title").addClass("right");
+        $("#city").find(".content").addClass("left"); 
+   }
   })
 
 }
