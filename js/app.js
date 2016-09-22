@@ -121,9 +121,7 @@ function scroll() {
         var $target = $(target);
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-        });
+        }, 500, 'swing', function () {});
         var mq = window.matchMedia("(max-width: 767px)");
         mq.addListener(WidthChange);
         WidthChange(mq);
@@ -164,7 +162,9 @@ function animate () {
         $("#city").find(".content").addClass("left");        
      }
      if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
-       $("#city").find(".title").addClass("right");
+         $("#york").find(".title").addClass("right");
+         $("#york").find(".content").addClass("left");
+         $("#city").find(".title").addClass("right");
         $("#city").find(".content").addClass("left"); 
    }
   })
