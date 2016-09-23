@@ -17,7 +17,7 @@ body {
 
 .top {
     transition: background 1.5s linear;
-    @include image(1100px, 630px);
+    @include image(767px, 500px);
     width: 100%;
     background-attachment: fixed;
     
@@ -143,7 +143,7 @@ body {
 }
 
 #new {
-        @include image(1100px, 630px);
+        @include image(767px, 500px);
         width: 100%;
         background-image: url(../images/newcc.jpg);
         background-attachment: fixed;
@@ -169,7 +169,7 @@ body {
 }
 
 #york {
-        @include image(1100px, 630px);
+        @include image(767px, 500px);
         width: 100%;
         background-image: url(../images/yorkcc.jpg);
         background-attachment: fixed;
@@ -195,7 +195,7 @@ body {
 }
 
 #city {
-        @include image(1100px, 630px);
+        @include image(767px, 500px);
         width: 100%;
         background-image: url(../images/citycc.jpg);
         background-attachment: fixed;
@@ -267,7 +267,7 @@ body {
 }
 
 .opacity {
-    @include image(1100px, 630px);
+    @include image(767px, 500px);
     background-color: rgba(255,255,255,0.3);
     
 
