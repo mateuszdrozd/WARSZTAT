@@ -275,7 +275,10 @@ body {
                 padding: 10% 10%;
                 }
 
-               
+                @include desktop {
+                padding: 10% 5%;
+                }
+        
             p {
                 font-size: 12px;
                 font-weight: 900;
