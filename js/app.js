@@ -4,17 +4,17 @@
 function menuView () {
     var menu=$(".menu-btn");
     menu.on("click", function () {
-      var bars=$(".fa-bars");
+      var bars=$(".bars");
       bars.toggleClass("invisible");
-      var x=$(".fa-times");
+      var x=$(".close");
       x.toggleClass("invisible");
     })
 }
 
 function menuReset () {
-      var bars=$(".fa-bars");
+      var bars=$(".bars");
       bars.removeClass("invisible");
-      var x=$(".fa-times");
+      var x=$(".close");
       x.addClass("invisible");
 }
 
