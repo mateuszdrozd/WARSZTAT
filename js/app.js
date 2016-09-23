@@ -175,11 +175,11 @@ function animate () {
 //changing background
 var index = 0;
 var background = [
-  "images/topc.jpg",
-  "images/top2c.jpg",
-  "images/top3c.jpg",
-  "images/top4c.jpg",
-  "images/top5c.jpg"
+  "images/topcc.jpg",
+  "images/top2cc.jpg",
+  "images/top3cc.jpg",
+  "images/top4cc.jpg",
+  "images/top5cc.jpg"
 ];
 
 function bgchange (){

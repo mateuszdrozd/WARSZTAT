@@ -136,7 +136,7 @@ body {
 #new {
         @include image(767px,500px);
         width: 100%;
-        background-image: url(../images/newc.jpg);
+        background-image: url(../images/newcc.jpg);
         background-attachment: fixed;
         -webkit-filter:grayscale(100%); 
         -moz-filter:grayscale(100%);
@@ -162,7 +162,7 @@ body {
 #york {
         @include image(767px,500px);
         width: 100%;
-        background-image: url(../images/yorkc.jpg);
+        background-image: url(../images/yorkcc.jpg);
         background-attachment: fixed;
         -webkit-filter:grayscale(100%); 
         -moz-filter:grayscale(100%);
@@ -188,7 +188,7 @@ body {
 #city {
         @include image(767px,500px);
         width: 100%;
-        background-image: url(../images/cityc.jpg);
+        background-image: url(../images/citycc.jpg);
         background-attachment: fixed;
         -webkit-filter:grayscale(100%); 
         -moz-filter:grayscale(100%);
