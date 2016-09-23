@@ -141,12 +141,12 @@ function animate () {
        var newX = $("#new").offset();
        var yorkX= $("#york").offset();
        var cityX= $("#city").offset();
-       console.log("Top: " + newX.top);
-       console.log("Top: " + yorkX.top);
-       console.log("Top: " + cityX.top);
+//       console.log("Top: " + newX.top);
+//       console.log("Top: " + yorkX.top);
+//       console.log("Top: " + cityX.top);
            
        var position = $(window).scrollTop();
-       console.log(position);
+      // console.log(position);
        if ( (position*1.4)>newX.top) {
           $("#new").find(".title").addClass("right");
           $("#new").find(".content").addClass("left");  
@@ -161,18 +161,20 @@ function animate () {
         $("#city").find(".title").addClass("right");
         $("#city").find(".content").addClass("left");        
      }
+        
      if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
          $("#york").find(".title").addClass("right");
          $("#york").find(".content").addClass("left");
          $("#city").find(".title").addClass("right");
         $("#city").find(".content").addClass("left"); 
-   }
+      }
   })
 
 }
 
 
 //changing background
+
 var index = 0;
 var background = [
   "images/topcc.jpg",
