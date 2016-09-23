@@ -193,7 +193,7 @@ function bgchange (){
   top.css("background-image","url('"+ background[index] +"')");
 }
 
-setInterval(bgchange, 5000);
+setInterval(bgchange, 7000);
 
 $(document).ready(function() {
     btn_Menu_Init ();
