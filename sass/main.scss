@@ -16,6 +16,7 @@ body {
 }
 
 .top {
+    transition: background 1.5s linear;
     @include image(767px,500px);
     width: 100%;
     background-attachment: fixed;
