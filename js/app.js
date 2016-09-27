@@ -1,57 +1,64 @@
 // hamburger menu
 
-var bars = $(".bars");
-var nav = $('.nav');
-var header = $(".top");
 
 function menuView() {
-    var menu = $(".menu-btn");
-    menu.on("click", function () {
+    var menuBtn = $('.menu-btn');
+    menuBtn.on("click", function () {
+        var bars = $(".bars");
+        var closeBtn = $(".close");
         bars.toggleClass("invisible");
-        var x = $(".close");
-        x.toggleClass("invisible");
+        closeBtn.toggleClass("invisible");
     })
 }
 
 function menuReset() {
+    var bars = $(".bars");
+    var closeBtn = $(".close");
     bars.removeClass("invisible");
-    var closeButton = $(".close");
-    closeButton.addClass("invisible");
+    closeBtn.addClass("invisible");
 }
 
 function hideNav() {
+    var nav = $('.nav');
     nav.addClass('hidden');
 }
 
 function showNav() {
+    var nav = $('.nav');
     nav.removeClass('hidden');
+    var header = $(".top");
     header.addClass('flex');
 }
 
 function showBtn() {
-    var $btn = $('.menu-btn');
-    $btn.removeClass('hidden');
+    var menuBtn = $('.menu-btn');
+    var header = $(".top");
+    menuBtn.removeClass('hidden');
     header.removeClass('flex');
 }
 
 function hideBtn() {
-    var $btn = $('.menu-btn');
-    $btn.addClass('hidden');
+    var menuBtn = $('.menu-btn');
+     menuBtn.addClass('hidden');
 }
 
 function btn_Menu_Init() {
-    $('.menu-btn').on('click', function (e) {
+    var menuBtn = $('.menu-btn');
+    menuBtn.on('click', function (e) {
+        var nav = $('.nav');
         e.preventDefault();
         nav.toggleClass('hidden');
     });
 }
 
 function dropDown() {
+    var nav = $('.nav');
     nav.addClass('menu-drop');
     nav.addClass("fadeIn");
 }
 
 function noDropDown() {
+    var nav = $('.nav');
     nav.removeClass('menu-drop');
     nav.removeClass("fadeIn");
 }
@@ -178,12 +185,16 @@ var background = [
 ];
 
 function bgchange() {
+    var header = $(".top");
     index++;
-    if (index === background.length) index = 0;
+    if (index === background.length) {
+    index = 0
+    };
     header.css("background-image", "url('" + background[index] + "')");
 }
 
 setInterval(bgchange, 7000);
+
 
 $(document).ready(function () {
     btn_Menu_Init();
