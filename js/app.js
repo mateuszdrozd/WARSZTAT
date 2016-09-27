@@ -65,17 +65,20 @@ function noDropDown() {
 
 
 //page layout
-var title = $(".title");
-var content = $(".content");
-var box = $(".box");
 
 function twoCols() {
+    var title = $(".title");
+    var content = $(".content");
+    var box = $(".box");
     title.addClass("title-width");
     content.addClass("content-width");
     box.addClass("box-flex");
 }
 
 function oneCol() {
+    var title = $(".title");
+    var content = $(".content");
+    var box = $(".box");
     title.removeClass("title-width");
     content.removeClass("content-width");
     box.removeClass("box-flex");
