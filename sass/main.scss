@@ -18,16 +18,8 @@ body {
 .top {
     transition: background 1.5s linear;
     @include image(767px, 500px);
-    background-size: contain;
     background-attachment: fixed;
 
-    @include tablet {
-    background-size:cover;
-  }
-
-  @include desktop {
-    background-size:cover;
-  }
     .btn-container {
         width: 100%;
         height:60px;
@@ -71,14 +63,16 @@ body {
         position: fixed;
         z-index: 10000;
         cursor: pointer;
+
                                   
            a {
-                font-size: 24px;
-                padding: 15px;
+             font-family: Miriam Libre;
+                font-size: 22px;
+                padding: 13px;
     
                 @include lg-mobile {
-                font-size: 26px;
-                padding: 17px;
+                font-size: 24px;
+                padding: 15px;
                 }
   
                 @include tablet {
