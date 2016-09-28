@@ -18,9 +18,16 @@ body {
 .top {
     transition: background 1.5s linear;
     @include image(767px, 500px);
-
+    background-size: contain;
     background-attachment: fixed;
-    
+
+    @include tablet {
+    background-size:cover;
+  }
+
+  @include desktop {
+    background-size:cover;
+  }
     .btn-container {
         width: 100%;
         height:60px;
@@ -221,11 +228,20 @@ body {
 }
 
 .hide-one {
+  -ms-transform:translateX(-300%);
+  -o-transform:translateX(-300%);
+  -moz-transform:translateX(-300%);
+  -webkit-transform:translateX(-300%);
     transform:translateX(-300%);
 }
 
 .hide-two {
+    -ms-transform:translateX(+300%);
+  -o-transform:translateX(+300%);
+  -moz-transform:translateX(+300%);
+  -webkit-transform:translateX(+300%);
     transform:translateX(+300%);
+
 }
 
 .right {
@@ -292,7 +308,7 @@ body {
                 }
         
             p {
-                font-size: 12px;
+                font-size: 11px;
                 font-weight: 900;
     
                 @include lg-mobile {
@@ -309,7 +325,7 @@ body {
             }
     
             h1 {
-                font-size: 24px;
+                font-size: 22px;
                 margin-bottom: 4%;
                 text-align: center;
             
